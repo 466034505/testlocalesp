@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <title>666firmware.openbuilds.com</title>
+    <title>777</title>
     <link rel="stylesheet" href="lib/xterm/css/xterm.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" />
@@ -23,40 +23,10 @@
     </div>
     <div class="container" id="main">
 
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">OpenBuilds Firmware Tool</a>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="https://openbuilds.com">Visit the OpenBuilds Forum</a></li>
-
-                </ul>
-              </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
-
       <div id="program">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">Device</h3>
+            <h3 class="panel-title">ESP连接状态</h3>
           </div>
           <div class="panel-body">
             <div id="bootloaderHelp">
@@ -75,20 +45,20 @@
               Step 3) Click on "Connect" to manage your device<br>
               <hr />
             </div>
-            <select name="baudrates" id="baudrates" style="display: none;">
-			  <option value="115200">115200</option>
+            <select name="baudrates" id="baudrates">
+			  <option value="115200">默认值115200</option>
               <option value="921600">921600</option>
               <option value="460800">460800</option>
               <option value="230400">230400</option>
 
             </select>
-            <input class="btn btn-danger btn-sm" type="button" id="disconnectButton" value="Disconnect" />
-            <input class="btn btn-success btn-sm" type="button" id="connectButton" value="Connect" />
+            <input class="btn btn-danger btn-sm" type="button" id="disconnectButton" value="断开ESP" />
+            <input class="btn btn-success btn-sm" type="button" id="connectButton" value="连接ESP" />
             <br>
 
 
 
-            <label style="display:none" id="lblConnTo">Connected to device: </label>
+            <label style="display:none" id="lblConnTo">已连接设备: </label>
 
 
 
@@ -104,7 +74,7 @@
         <div id="files">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">Firmware</h3>
+              <h3 class="panel-title">固件</h3>
             </div>
             <div class="panel-body">
 
@@ -114,19 +84,13 @@
               </div>
 
 
-              <div id="standardFirmwares" style="display: none; padding: 30px;">
-                <input class="btn btn-success btn-sm " type="button" id="programSWButton" value="OpenBuilds SwitchBlox" />
-                <input class="btn btn-success btn-sm disabled" type="button" id="programBBX32Button" value="OpenBuilds BlackBox X32" />
-                <input class="btn btn-success btn-sm disabled" type="button" id="programIF1Button" value="OpenBuilds Interface V1" />
-                <input class="btn btn-success btn-sm disabled" type="button" id="programIF2Button" value="OpenBuilds Interface X32" />
-              </div>
 
               <div id="customFirmwares" style="padding: 30px;">
                 <table class="table table-striped" id="fileTable">
                   <thead class="thead-light">
                     <tr>
-                      <th>Flash Address</th>
-                      <th>File</th>
+                      <th>起始位置</th>
+                      <th>从本地选择Bin文件</th>
                       <th></th>
                     </tr>
                   </thead>
@@ -136,8 +100,8 @@
 
 
                 <hr>
-                <input class="btn btn-info btn-sm" type="button" id="addFile" value="Add File" />
-                <input class="btn btn-success btn-sm" type="button" id="programButton" value="Program Custom Firmware Binaries" />
+                <input  style="display: none;" class="btn btn-info btn-sm" type="button" id="addFile" value="Add File" />
+                <input class="btn btn-success btn-sm" type="button" id="programButton" value="开始刷机" />
 
                 <output id="list"></output>
               </div>
@@ -152,10 +116,10 @@
       <div id="console">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">Log / Console</h3>
+            <h3 class="panel-title">日志</h3>
           </div>
           <div class="panel-body">
-            <label style="display:none" id="lblConsoleFor">Connected to device: </label>
+            <label style="display:none" id="lblConsoleFor">已连接设备: </label>
             <div id="terminal"></div>
           </div>
         </div>

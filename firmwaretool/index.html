@@ -107,17 +107,10 @@
             </div>
             <div class="panel-body">
               <ul class="nav nav-tabs">
-                <li role="presentation" id="standardFirmwaresTab" class="active"
-                  onclick="$('#standardFirmwaresTab').addClass('active'); $('#customFirmwaresTab').removeClass('active'); $('#eraseTab').removeClass('active'); $('#standardFirmwares').show(); $('#customFirmwares').hide(); $('#eraseFlash').hide();">
-                  <a href="#">Flash Factory Firmware</a></li>
                 <li role="presentation" id="customFirmwaresTab"
                   onclick="$('#standardFirmwaresTab').removeClass('active'); $('#customFirmwaresTab').addClass('active'); $('#eraseTab').removeClass('active'); $('#standardFirmwares').hide(); $('#customFirmwares').show(); $('#eraseFlash').hide();"><a
                     href="#">Flash Custom
                     Firmware</a></li>
-                <li role="presentation" id="eraseTab"
-                  onclick="$('#standardFirmwaresTab').removeClass('active'); $('#customFirmwaresTab').removeClass('active'); $('#eraseTab').addClass('active'); $('#standardFirmwares').hide(); $('#customFirmwares').hide(); $('#eraseFlash').show();"><a
-                    href="#">Flash Erase and Utilities</a>
-                </li>
               </ul>
 
               <div id="eraseFlash" style="display: none; padding: 30px;">

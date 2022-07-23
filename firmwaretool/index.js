@@ -201,6 +201,7 @@ addFile.onclick = () => {
   element1.type = "text";
   element1.id = "offset" + rowCount;
   element1.value = '0x0000';
+  element1.style.display = "none";
   cell1.appendChild(element1);
 
   // Column 2 - File selector

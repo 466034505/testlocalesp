@@ -114,23 +114,21 @@
 
 
               <div id="customFirmwares" style="padding: 30px;">
-                <table class="table table-striped" id="fileTable">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>Flash Address</th>
-                      <th>File</th>
-                      <th></th>
-                    </tr>
-					<tr><td><input type="text" id="offset1"></td><td><input type="file" id="selectFile1" name="selected_File1"></td><td class="progress-cell" style=""><progress value="0" max="100"></progress></td><td class="action-cell"></td></tr>
-                  </thead>
-                  <tbody id="tableBody">
-                  </tbody>
-                </table>
-
-
-                <hr>
-                <input class="btn btn-info btn-sm" type="button" id="addFile" value="Add File" />
-                <input class="btn btn-success btn-sm" type="button" id="programButton" value="Program Custom Firmware Binaries" />
+                 <div id="files">
+                    <table class="table table-striped" id="fileTable">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Flash Address</th>
+                                <th>File</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                    <input class="btn btn-info btn-sm" type="button" id="addFile" value="Add File" />
+                    <input class="btn btn-info btn-sm" type="button" id="programButton" value="Program" />
+                </div>
 
                 <output id="list"></output>
               </div>

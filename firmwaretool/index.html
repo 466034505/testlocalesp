@@ -75,7 +75,7 @@
               Step 3) Click on "Connect" to manage your device<br>
               <hr />
             </div>
-            <select name="baudrates" id="baudrates">
+            <select name="baudrates" id="baudrates" style="display: none;">
               <option value="115200">115200</option>
 			  <option value="921600">921600</option>
               <option value="460800">460800</option>
@@ -105,30 +105,13 @@
             <div class="panel-heading">
               <h3 class="panel-title">Firmware</h3>
             </div>
-            
+            <div class="panel-body">
 
               <div id="eraseFlash" style="display: none; padding: 30px;">
                 <input class="btn btn-danger btn-sm" type="button" id="eraseButton" value="Erase Flash" />
                 <input class="btn btn-info btn-sm" type="button" id="resetButton" value="Reset Device" />
               </div>
 
-
-
-              <div id="customFirmwares" style="display: none; padding: 30px;">
-                <table class="table table-striped" id="fileTable">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>Flash Address</th>
-                      <th>File</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody id="tableBody">
-                  </tbody>
-                </table>
-
-
-                <hr>
                 <input class="btn btn-info btn-sm" type="button" id="addFile" value="Add File" />
                 <input class="btn btn-success btn-sm" type="button" id="programButton" value="Program Custom Firmware Binaries" />
 

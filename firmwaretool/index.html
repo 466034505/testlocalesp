@@ -83,14 +83,19 @@
                 <input class="btn btn-info btn-sm" type="button" id="resetButton" value="Reset Device" />
               </div>
 
-
+                <div id="standardFirmwares" style="display: none; padding: 30px;">
+                <input class="btn btn-success btn-sm " type="button" id="programSWButton" value="OpenBuilds SwitchBlox" />
+                <input class="btn btn-success btn-sm disabled" type="button" id="programBBX32Button" value="OpenBuilds BlackBox X32" />
+                <input class="btn btn-success btn-sm disabled" type="button" id="programIF1Button" value="OpenBuilds Interface V1" />
+                <input class="btn btn-success btn-sm disabled" type="button" id="programIF2Button" value="OpenBuilds Interface X32" />
+              </div>
 
               <div id="customFirmwares" style="padding: 30px;">
                 <table class="table table-striped" id="fileTable">
                   <thead class="thead-light">
                     <tr>
-                      <th>起始位置</th>
-                      <th>从本地选择Bin文件</th>
+                      <th>Flash Address</th>
+                      <th>File</th>
                       <th></th>
                     </tr>
                   </thead>

@@ -45,7 +45,7 @@
               Step 3) Click on "Connect" to manage your device<br>
               <hr />
             </div>
-            <select name="baudrates" id="baudrates">
+            <select style="display:none" name="baudrates" id="baudrates">
 			  <option value="115200">默认值115200</option>
               <option value="921600">921600</option>
               <option value="460800">460800</option>
@@ -94,8 +94,8 @@
                 <table class="table table-striped" id="fileTable">
                   <thead class="thead-light">
                     <tr>
-                      <th>Flash Address</th>
-                      <th>File</th>
+		      <th>File</th>
+                      <th style="display:none">Flash Address</th>
                       <th></th>
                     </tr>
                   </thead>

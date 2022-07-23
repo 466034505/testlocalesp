@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <title>firmware.openbuilds.com</title>
+    <title>666firmware.openbuilds.com</title>
     <link rel="stylesheet" href="lib/xterm/css/xterm.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" />
@@ -76,10 +76,11 @@
               <hr />
             </div>
             <select name="baudrates" id="baudrates" style="display: none;">
-              <option value="115200">115200</option>
-			  <option value="921600">921600</option>
+			  <option value="115200">115200</option>
+              <option value="921600">921600</option>
               <option value="460800">460800</option>
               <option value="230400">230400</option>
+
             </select>
             <input class="btn btn-danger btn-sm" type="button" id="disconnectButton" value="Disconnect" />
             <input class="btn btn-success btn-sm" type="button" id="connectButton" value="Connect" />
@@ -113,22 +114,30 @@
               </div>
 
 
+              <div id="standardFirmwares" style="display: none; padding: 30px;">
+                <input class="btn btn-success btn-sm " type="button" id="programSWButton" value="OpenBuilds SwitchBlox" />
+                <input class="btn btn-success btn-sm disabled" type="button" id="programBBX32Button" value="OpenBuilds BlackBox X32" />
+                <input class="btn btn-success btn-sm disabled" type="button" id="programIF1Button" value="OpenBuilds Interface V1" />
+                <input class="btn btn-success btn-sm disabled" type="button" id="programIF2Button" value="OpenBuilds Interface X32" />
+              </div>
+
               <div id="customFirmwares" style="padding: 30px;">
-                 <div id="files">
-                    <table class="table table-striped" id="fileTable">
-                        <thead class="thead-light">
-                            <tr>
-                                <th>Flash Address</th>
-                                <th>File</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableBody">
-                        </tbody>
-                    </table>
-                    <input class="btn btn-info btn-sm" type="button" id="addFile" value="Add File" />
-                    <input class="btn btn-info btn-sm" type="button" id="programButton" value="Program" />
-                </div>
+                <table class="table table-striped" id="fileTable">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Flash Address</th>
+                      <th>File</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableBody">
+                  </tbody>
+                </table>
+
+
+                <hr>
+                <input class="btn btn-info btn-sm" type="button" id="addFile" value="Add File" />
+                <input class="btn btn-success btn-sm" type="button" id="programButton" value="Program Custom Firmware Binaries" />
 
                 <output id="list"></output>
               </div>
